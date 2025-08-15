@@ -2,10 +2,9 @@ clc
 clear
 
 cmip6_CTQ_waterY10(1) = struct();
-load("I:\1-code\20250706-Qproject\code_analysis\data_local_water_year_startMonth.mat","start_month2320");
+load("I:\1-code\data_local_water_year_startMonth.mat","start_month2320");
 
-load("I:\1-code\20250706-Qproject\data_2320sites\6-project-runoff\2-hebin-project runoff\" + ...
-    "data_projectRunoff_cmip6_his.mat","Qday");
+load("I:\1-code\data_projectRunoff_cmip6_his.mat","Qday");
 data = mean(Qday,3,'omitnan');
 times = (datetime(1980,1,1):datetime(2014,12,31))';
 for ss = 1:2320
@@ -19,8 +18,7 @@ cmip6_CTQ_waterY10(1).CTQ_his = CTP;
 clearvars result1 CTP cmip6_his data
 
 
-load("I:\1-code\20250706-Qproject\data_2320sites\6-project-runoff\2-hebin-project runoff\" + ...
-    "data_projectRunoff_cmip6_ssp126.mat","Qday");
+load("I:\1-code\data_projectRunoff_cmip6_ssp126.mat","Qday");
 data = mean(Qday,3,'omitnan');
 times = (datetime(2015,1,1):datetime(2100,12,31))';
 for ss = 1:2320
@@ -33,8 +31,7 @@ end
 cmip6_CTQ_waterY10(1).CTQ_ssp126 = CTP;
 clearvars result1 CTP cmip6_his data
 
-load("I:\1-code\20250706-Qproject\data_2320sites\6-project-runoff\2-hebin-project runoff\" + ...
-    "data_projectRunoff_cmip6_ssp245.mat","Qday");
+load("I:\1-code\data_projectRunoff_cmip6_ssp245.mat","Qday");
 data = mean(Qday,3,'omitnan');
 times = (datetime(2015,1,1):datetime(2100,12,31))';
 for ss = 1:2320
@@ -47,8 +44,7 @@ end
 cmip6_CTQ_waterY10(1).CTQ_ssp245 = CTP;
 clearvars result1 CTP cmip6_his data
 
-load("I:\1-code\20250706-Qproject\data_2320sites\6-project-runoff\2-hebin-project runoff\" + ...
-    "data_projectRunoff_cmip6_ssp370.mat","Qday");
+load("I:\1-code\data_projectRunoff_cmip6_ssp370.mat","Qday");
 data = mean(Qday,3,'omitnan');
 times = (datetime(2015,1,1):datetime(2100,12,31))';
 for ss = 1:2320
@@ -61,8 +57,7 @@ end
 cmip6_CTQ_waterY10(1).CTQ_ssp370 = CTP;
 clearvars result1 CTP cmip6_his data
 
-load("I:\1-code\20250706-Qproject\data_2320sites\6-project-runoff\2-hebin-project runoff\" + ...
-    "data_projectRunoff_cmip6_ssp585.mat","Qday");
+load("I:\1-code\data_projectRunoff_cmip6_ssp585.mat","Qday");
 data = mean(Qday,3,'omitnan');
 times = (datetime(2015,1,1):datetime(2100,12,31))';
 for ss = 1:2320
